@@ -10,21 +10,54 @@ import { Feather as Icon } from '@expo/vector-icons'
 import { RectButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
 import RNSelect from 'react-native-picker-select';
+import axios from 'axios';
 
 import styles from './styles';
 
+interface IBGEUFResponse {
+  sigla: string;
+}
+interface IBGECityResponse {
+  nome: string;
+}
+
 const Home = () => {
-  const[uf, setUf] = useState<string>('');
-  const[city, setCity] = useState<string>('');
+  const [selectedUf, setSelectedUf] = useState('0');
+  const [selectedCity, setSelectedCity] = useState('0');
+
+  const [ufs, setUfs] = useState<string[]>([]);
+  const [cities, setCities] = useState<string[]>([]);
+
   const navigation = useNavigation();
 
+  useEffect(() => {
+    axios.get<IBGEUFResponse[]>('https://servicodados.ibge.gov.br/api/v1/localidades/estados').then(res => {
+     // const ufInitials = res.data.map(uf => uf.sigla);
+      const ufInitials = res.data.map(uf => uf.sigla);
+
+      setUfs(ufInitials);
+    });
+  }, []);
+
+  useEffect(() => {
+    if(selectedUf === '0') {
+      return;
+    }
+
+    axios.get<IBGECityResponse[]>(`https://servicodados.ibge.gov.br/api/v1/localidades/estados/${selectedUf}/municipios`).then(res => {
+      const cityNames = res.data.map(city => city.nome);
+
+      setCities(cityNames);
+    });
+  }, [selectedUf]);
+
   function handleNavigateToPoints() {
-    if(uf === '') {
+    if(selectedUf === '') {
       Alert.alert('Opss...', 'selecione um estado pra continuar');
-    } else if(city === '') {
+    } else if(selectedCity === '') {
       Alert.alert('Opss...', 'selecione uma cidade pra continuar');
     } else {
-      navigation.navigate('Points', {uf, city});
+      navigation.navigate('Points', {uf: selectedUf, city: selectedCity});
     }
   }
 
@@ -48,16 +81,16 @@ const Home = () => {
           <RNSelect
             placeholder={{
               label: 'Selecione um estado',
-              value: null,
+              value: '0',
             }}
-            value={uf}
-            onValueChange={selected => selected ? setUf(selected) : setUf('')}
-            items={[
-              {label: 'MG', value: 'MG'},
-              {label: 'RS', value: 'RS'},
-              {label: 'MR', value: 'MR'},
-              {label: 'SP', value: 'SP'},
-            ]}
+            value={selectedUf}
+            onValueChange={setSelectedUf}
+            items={ufs.map(uf => {
+              return {
+                label: uf,
+                value: uf,
+              }
+            })}
           />
         </View>
         
@@ -67,14 +100,14 @@ const Home = () => {
               label: 'Selecione uma cidade',
               value: null,
             }}
-            value={city}
-            onValueChange={selected => selected ? setCity(selected) : setCity('')}
-            items={[
-              {label: 'Brasília de Minas', value: 'Brasília de Minas'},
-              {label: 'Montes Claros', value: 'Montes Claros'},
-              {label: 'Japonvar', value: 'São Francisco'},
-              {label: 'Nova Minda', value: 'Belo Horizonte'},
-            ]}
+            value={selectedCity}
+            onValueChange={setSelectedCity}
+            items={cities.map(city => {
+              return {
+                label: city,
+                value: city,
+              }
+            })}
           />
         </View>
 
