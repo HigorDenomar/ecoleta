@@ -47,6 +47,8 @@ ___
 
 <img src="./prints/create-point-03.png" />
 
+<br/>&nbsp;
+
 <h2 id="techs"> Technologies </h2>
 
 This project was developed with the following technologies:
@@ -76,6 +78,8 @@ This project was developed with the following technologies:
 - [Expo Google Fonts](https://github.com/expo/google-fonts)
 - [Mail Composer](https://docs.expo.io/versions/latest/sdk/mail-composer/)
 - [Map View](https://docs.expo.io/versions/latest/sdk/map-view/)
+
+<br/>&nbsp;
 
 <h2 id="running-locally"> Running locally </h2>
 
