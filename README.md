@@ -2,7 +2,7 @@
 
   <img src="./web/src/assets/logo.svg">
   
-  <br/><br/>
+  <br/>&nbsp;
   
   <p>Project carried out during the <b>Next Level Week #01</b></p>
 
@@ -24,9 +24,9 @@
 Mobile:
 
 <div align="center">
-  <img src="./prints/home-mobile.jpeg" width="280" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./prints/points-mobile.jpeg" width="280" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./prints/details-mobile.jpeg" width="280" />
+  <img src="./prints/home-mobile.jpeg" width="265" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./prints/points-mobile.jpeg" width="265" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./prints/details-mobile.jpeg" width="265" />
 </div>
 
 Web:
