@@ -24,10 +24,12 @@
 Mobile:
 
 <div align="center">
-  <img src="./prints/home-mobile.jpeg" width="265" />&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./prints/points-mobile.jpeg" width="265" />&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./prints/home-mobile.jpeg" width="265" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./prints/points-mobile.jpeg" width="265" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="./prints/details-mobile.jpeg" width="265" />
 </div>
+
+<br/>
 
 Web:
 
