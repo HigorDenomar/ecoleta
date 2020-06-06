@@ -2,7 +2,7 @@
 
   <img src="./web/src/assets/logo.svg">
   
-  <br/>&nbsp;
+  <br/>
   
   <p>Project carried out during the <b>Next Level Week #01</b></p>
 
@@ -29,7 +29,7 @@ Mobile:
   <img src="./prints/details-mobile.jpeg" width="265" />
 </div>
 
-<br/>
+<br/>&nbsp;
 
 Web:
 
