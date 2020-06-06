@@ -84,7 +84,6 @@ const Points = () => {
         items: selectedItems,
       }
     }).then(res => {
-      console.log(res.data)
       setPoints(res.data);
     });
   }, [selectedItems]);
