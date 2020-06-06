@@ -2,9 +2,9 @@
 
   <img src="./web/src/assets/logo.svg">
   
-  <br>
+  <br/><br/>
   
-  <p>Projeto realizado durante a <b>Next Level Week #01</b></p>
+  <p>Project carried out during the <b>Next Level Week #01</b></p>
 
 </div>
 
