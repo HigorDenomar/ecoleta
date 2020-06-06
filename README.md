@@ -21,6 +21,12 @@
 
 <h2 id="demo"> Demo </h2>
 
+Web:
+
+<img src="./prints/web.gif" />
+
+<br/>&nbsp;
+
 Mobile:
 
 <div align="center">
@@ -28,24 +34,6 @@ Mobile:
   <img src="./prints/points-mobile.jpeg" width="265" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <img src="./prints/details-mobile.jpeg" width="265" />
 </div>
-
-<br/>&nbsp;
-
-Web:
-
-<img src="./prints/home-web.png" />
-
-___
-
-<img src="./prints/create-point-01.png" />
-
-___
-
-<img src="./prints/create-point-02.png" />
-
-___
-
-<img src="./prints/create-point-03.png" />
 
 <br/>&nbsp;
 
