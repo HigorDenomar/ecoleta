@@ -23,17 +23,26 @@
 
 Mobile:
 
-<div>
-  <img src="./prints/home-mobile.jpeg" width="250" />
-  <img src="./prints/points-mobile.jpeg" width="250" />
-  <img src="./prints/details-mobile.jpeg" width="250" />
+<div align="center">
+  <img src="./prints/home-mobile.jpeg" width="280" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./prints/points-mobile.jpeg" width="280" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./prints/details-mobile.jpeg" width="280" />
 </div>
 
 Web:
 
 <img src="./prints/home-web.png" />
+
+___
+
 <img src="./prints/create-point-01.png" />
+
+___
+
 <img src="./prints/create-point-02.png" />
+
+___
+
 <img src="./prints/create-point-03.png" />
 
 <h2 id="techs"> Technologies </h2>
