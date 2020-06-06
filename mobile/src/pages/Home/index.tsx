@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import {
   View,
   Text,
@@ -84,7 +84,7 @@ const Home = () => {
               value: '0',
             }}
             value={selectedUf}
-            onValueChange={setSelectedUf}
+            onValueChange={value => setSelectedUf(value)}
             items={ufs.map(uf => {
               return {
                 label: uf,
@@ -101,7 +101,7 @@ const Home = () => {
               value: null,
             }}
             value={selectedCity}
-            onValueChange={setSelectedCity}
+            onValueChange={value => setSelectedCity(value)}
             items={cities.map(city => {
               return {
                 label: city,
