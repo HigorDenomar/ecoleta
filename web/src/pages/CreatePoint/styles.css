@@ -203,3 +203,49 @@
   background: #E1FAEC;
   border: 2px solid #34CB79;
 }
+
+#check {
+  display: none;
+}
+
+#check h1 {
+  font-family: Roboto;
+  color: #F0F0F5;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 36px;
+  margin-top: 30px;
+}
+
+#check.on {
+  transition: 0.3s;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  background: #0E0A14;
+  opacity: 0.95;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#check.on h1 {
+  animation: anim 0.3s backwards ease-out 0.4s 1;
+}
+#check.on svg {
+  animation: anim 0.5s backwards ease-out 0.2s 1;
+}
+
+@keyframes anim {
+  0% {
+    transform: scale(0);
+
+  } 75% {
+    transform: scale(1);
+  } 100% {
+    transform: scale(0.9);
+  }
+}

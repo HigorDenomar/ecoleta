@@ -5,7 +5,7 @@ import React, {
   FormEvent
 } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import { FiArrowLeft } from 'react-icons/fi';
+import { FiArrowLeft, FiCheckCircle } from 'react-icons/fi';
 import { Map, TileLayer, Marker } from 'react-leaflet';
 import { LeafletMouseEvent } from 'leaflet';
 import axios from 'axios';
@@ -30,6 +30,7 @@ interface IBGECityResponse {
 }
 
 const CreatePoint = () => {
+  const [check, setCheck] = useState<boolean>(false);
   const [items, setItems] = useState<Item[]>([]);
   const [ufs, setUfs] = useState<string[]>([]);
   const [cities, setCities] = useState<string[]>([]);
@@ -147,12 +148,14 @@ const CreatePoint = () => {
     if(selectedFile) {
       data.append('image', selectedFile);
     }
-    
+
     await api.post('points', data);
 
-    alert('Ponto de coleta cadastrado!');
+    setCheck(!check);
 
-    history.push('/');
+    setTimeout(()=> {
+      history.push('/');
+    }, 1600);
   }
 
   return (
@@ -277,6 +280,11 @@ const CreatePoint = () => {
         <button type="submit">
           Cadastrar ponto de coleta
         </button>
+        
+        <div id="check" className={ check ? 'on' : ''}>
+          <FiCheckCircle color="#34CB79" size={60} />
+          <h1>Cadastro concluído!</h1>
+        </div>
       </form>
     </div>
   );
