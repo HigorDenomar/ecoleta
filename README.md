@@ -29,10 +29,9 @@ Web:
 
 Mobile:
 
-<div align="center">
-  <img src="./prints/home-mobile.jpeg" width="265" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./prints/points-mobile.jpeg" width="265" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <img src="./prints/details-mobile.jpeg" width="265" />
+<div>
+  <img src="./prints/home-mobile.jpeg" width="295" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img src="./prints/mobile.gif" width="307" />
 </div>
 
 <br/>&nbsp;
